@@ -22,21 +22,28 @@
         <div id="videosection" class="section">
             <script src= "http://player.twitch.tv/js/embed/v1.js"></script>
             <div id="twitchplayer"></div>
-            <script type="text/javascript">
-                var element = $("#videosection")
-                var options = {
-                    height: element.height(),
-                    width: element.width(),
-                    channel: "insightradio",
-                    playinline: true
-                };
-                var player = new Twitch.Player("twitchplayer", options);
-            </script>
-
         </div>
        
         <div class="section">
             <h1>test</h1>
         </div>
     </div>
+    
+    	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#f2f2f2', '#4BBFC3']
+			});
+            var element = $("#videosection")
+            var options = {
+                height: element.height(),
+                width: element.width(),
+                channel: "insightradio",
+                playinline: true
+            };
+            var player = new Twitch.Player("twitchplayer", options);
+
+		});
+	</script>
+
 </body>
