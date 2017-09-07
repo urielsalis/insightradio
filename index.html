@@ -1,1 +1,42 @@
- 
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Insight Radio</title>
+    <meta name="author" content="Uriel Salischiker" />
+    <meta name="description" content="Can you feel it? Radio online dj" />
+    <meta name="keywords"  content="dj,radio,online,insight,insight radio,urielsalis,crabbits,uriel salischiker,house,electronica,progress,musica,music" />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="dist/jquery.fullPage.min.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
+
+    <script type="text/javascript" src="dist/jquery.fullPage.min.js"></script>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="videosection" class="section">
+            <script src= "http://player.twitch.tv/js/embed/v1.js"></script>
+            <div id="twitchplayer"></div>
+            <script type="text/javascript">
+                var element = $("#videosection")
+                var options = {
+                    height: element.height(),
+                    width: element.width(),
+                    channel: "insightradio",
+                    playinline: true
+                };
+                var player = new Twitch.Player("twitchplayer", options);
+            </script>
+
+        </div>
+       
+        <div class="section">
+            <h1>test</h1>
+        </div>
+    </div>
+</body>
