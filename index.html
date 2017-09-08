@@ -9,7 +9,10 @@
 
     <link rel="stylesheet" type="text/css" href="dist/jquery.fullpage.min.css" />
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
 
     <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
     <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
@@ -45,7 +48,8 @@
 			width="100%"
 			frameborder="0"
 			scrolling="no"
-			allowfullscreen="true">
+			allowfullscreen="true"
+			     class='twitchiframe'>
 		    </iframe>
 		</div>
 		<div style="height: 10%; float:bottom">
@@ -72,6 +76,15 @@
 				navigationPosition: 'right',
 				navigationTooltips: ['Stream', 'Old']
 			});
+			
+			$(window).scroll(function() {
+			   if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+			       $(window).unbind('scroll');
+			       $.fn.fullpage.moveSectionDown();
+			   }
+			});
+			
+			
 		});
 	</script>
 
