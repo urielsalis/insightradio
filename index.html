@@ -22,7 +22,7 @@
 		/* Style for our header texts
 		* --------------------------------------- */
 		h1{
-			font-size: 5%;
+			font-size: 100%;
 			font-family: 'Montserrat', sans-serif;
 			color: #fff;
 			margin:0;
@@ -34,17 +34,22 @@
 <body>
     <div id="fullpage">
         <div id="videosection" class="section">
-			    <h1>INSIGHT RADIO</h1>
+		<div style="height: 5%; float:top">
+			<h1>INSIGHT RADIO</h1>
+		</div>
+		<div style="height: 95%; float:center">
 
-             <iframe
-                src="http://player.twitch.tv/?channel=insightradio"
-                height="90%"
-                width="100%"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen="true">
-            </iframe>
-
+		     <iframe
+			src="http://player.twitch.tv/?channel=insightradio"
+			height="90%"
+			width="100%"
+			frameborder="0"
+			scrolling="no"
+			allowfullscreen="true">
+		    </iframe>
+		</div>
+		<div style="height: 5%; float:bottom">
+		</div>
         </div>
        
         <div id="others" class="section">
