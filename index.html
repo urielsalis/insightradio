@@ -77,11 +77,13 @@
 				navigationTooltips: ['Stream', 'Old']
 			});
 			
-			$(window).scroll(function() {
-			   if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-			       $(window).unbind('scroll');
-			       $.fn.fullpage.moveSectionDown();
-			   }
+			$(window).bind('mousewheel', function(event) {
+			    if (event.originalEvent.wheelDelta >= 0) {
+				$.fn.fullpage.moveSectionUp();
+			    }
+			    else {
+				$.fn.fullpage.moveSectionDown();
+			    }
 			});
 			
 			
