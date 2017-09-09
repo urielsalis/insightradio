@@ -79,9 +79,11 @@
 			
 			$(window).bind('mousewheel', function(event) {
 			    if (event.originalEvent.wheelDelta >= 0) {
+				console.log('esto es pobre scroll up');
 				$.fn.fullpage.moveSectionUp();
 			    }
 			    else {
+				console.log('esto es pobre scroll down');
 				$.fn.fullpage.moveSectionDown();
 			    }
 			});
