@@ -1,0 +1,60 @@
+.podcastsSection {
+    background: url('../img/moon.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.radioContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.podcastsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.podcasts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.mixcloudiframe {
+    width: 40vw;
+    height: 40vh;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slogan {
+    font-weight: 200;
+    font-size: 3em;
+    color: #E0E0E0;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 4em;
+    color: #F5F5F5;
+}
+
+.smalltext {
+    font-size: 3em;
+}
+
+.twitchiframe {
+    width: 50vw;
+    height: 80vh;
+    margin-left: 4%;
+}

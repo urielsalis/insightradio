@@ -1,95 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/jquery.fullPage.css">
+    <link rel="stylesheet" href="src/css/general.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <title>Insight Radio</title>
-    <meta name="author" content="Uriel Salischiker" />
-    <meta name="description" content="Can you feel it? Radio online dj" />
-    <meta name="keywords"  content="dj,radio,online,insight,insight radio,urielsalis,crabbits,uriel salischiker,house,electronica,progress,musica,music" />
-    <meta name="Resource-type" content="Document" />
-
-    <link rel="stylesheet" type="text/css" href="dist/jquery.fullpage.min.css" />
-
-    <script
-	  src="https://code.jquery.com/jquery-3.2.1.min.js"
-	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  crossorigin="anonymous"></script>
-
-    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
-    <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
-
-    <script type="text/javascript" src="dist/jquery.fullpage.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-	<style>
-
-		/* Style for our header texts
-		* --------------------------------------- */
-		h1{
-			font-size: 100%;
-			font-family: 'Montserrat', sans-serif;
-			color: #fff;
-			margin:0;
-			text-align:center;
-		}
-	</style>
 </head>
-
 <body>
     <div id="fullpage">
-        <div id="videosection" class="section">
-		<div style="height: 10%; float:top">
-			<h1>INSIGHT RADIO</h1>
-		</div>
-		<div style="height: 95%; float:center">
-
-		     <iframe
-			src="http://player.twitch.tv/?channel=insightradio"
-			height="80%"
-			width="100%"
-			frameborder="0"
-			scrolling="no"
-			allowfullscreen="true"
-			     class='twitchiframe'>
-		    </iframe>
-		</div>
-		<div style="height: 10%; float:bottom">
-		</div>
-        </div>
-       
-        <div id="others" class="section">
-		<div style="width: 50%; float:left">
-	            <iframe width="100%" height="400" src="https://www.mixcloud.com/widget/iframe/?feed=%2FInsightRadio%2Finsight-radio-del-mon-episodes-01%2F" frameborder="0" ></iframe>
-		</div>
-
-		<div style="width: 50%; float:right">
-	   		#right content in there
-		</div>
-
-        </div>
+        <section class="section radioSection">
+            <div class="radioContainer">
+                <div class="presentation">
+                        <span class="slogan">CAN YOU FEEL IT?</span>
+                    <span class="title">INSIGHT RADIO</span>
+                </div>
+                <iframe
+                        src="http://player.twitch.tv/?channel=insightradio"
+                        frameborder="0"
+                        scrolling="no"
+                        allowfullscreen="true"
+                        class='twitchiframe'>
+                </iframe>
+            </div>
+        </section>
+        <section class="section podcastsSection">
+            <div class="podcastsContainer">
+                <span class="title smalltext" >OUR PODCASTS</span>
+                <div class="podcasts">
+                    <iframe
+                            src="https://www.mixcloud.com/widget/iframe/?feed=%2FInsightRadio%2Finsight-radio-del-mon-episodes-01%2F"
+                            frameborder="0"
+                            class='mixcloudiframe'></iframe>
+                    <iframe
+                            src="https://www.mixcloud.com/widget/iframe/?feed=%2FInsightRadio%2Finsight-radio-del-mon-episodes-01%2F"
+                            frameborder="0"
+                            class='mixcloudiframe'></iframe>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				sectionsColor: ['#000000', '#000000'],
-				navigation: true,
-				navigationPosition: 'right',
-				navigationTooltips: ['Stream', 'Old']
-			});
-			
-			$(window).bind('mousewheel', function(event) {
-			    if (event.originalEvent.wheelDelta >= 0) {
-				console.log('esto es pobre scroll up');
-				$.fn.fullpage.moveSectionUp();
-			    }
-			    else {
-				console.log('esto es pobre scroll down');
-				$.fn.fullpage.moveSectionDown();
-			    }
-			});
-			
-			
-		});
-	</script>
-
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="src/js/jquery.fullPage.min.js"></script>
+    <script src="src/js/parallax.min.js"></script>
+    <script src="src/js/main.js"></script>
 </body>
+</html>
